@@ -11,57 +11,56 @@ namespace Album_Fil
     public partial class MainPage : CarouselPage
     {
         Button btn1, btn2, btn3, btn4;
-        Label Angrytoys, X2, Introduction, ARTHOES;
-     
+        Label Introduction, Angrytoys, OLDBLOOD, X2;
+        
         public MainPage()
         {
             btn1 = new Button
             {
-                ImageSource = "OLD_BLOOD.jpg"
+                ImageSource = "oldblood.jpg"
             };
             btn1.Clicked += Btn1_Clicked1;
-            Angrytoys = new Label
+            Introduction = new Label
             {
                 IsVisible = false,
                 Padding = 20,
-                Text = "«Этот трек — дань уважения моему уфимскому кругу граффити-художников. У нас на районе в свое время было две команды — Never Been Crew и Kamuna Angry Toys, — и мы вместе рисовали. Это пацаны, с которыми мы вместе взрослели, и я с ними общаюсь до сих пор». ",
+                Text = "«Я очень хотел себе интро в духе старых рэперских альбомов. Искал-искал, и оно мне в руки само упало. Этот фрагмент взят из интервью Ксении Анатольевны Собчак с Алсу, где Собчак ставит Алсу мой трек. Так сказать, цитаты великих людей». ",
                 FontSize = 12
             };
             btn2 = new Button
             {
-                ImageSource = "OLD_BLOOD.jpg"
+                ImageSource = "oldblood.jpg"
             };
             btn2.Clicked += Btn2_Clicked; ;
-            X2 = new Label
+            Angrytoys = new Label
+            {
+                IsVisible = false,
+                Padding = 20,
+                Text = "«Этот трек — дань уважения моему уфимскому кругу граффити-художников. У нас на районе в свое время было две команды — Never Been Crew и Kamuna Angry Toys, — и мы вместе рисовали. Это пацаны, с которыми мы вместе взрослели, и я с ними общаюсь до сих пор». "
+            };
+            btn3 = new Button
+            {
+                ImageSource = "oldblood.jpg"
+            };
+            btn3.Clicked += Btn3_Clicked;
+            OLDBLOOD = new Label
             {
                 IsVisible = false,
                 Padding = 20,
                 Text = "«Этот трек о том, что я сижу и работаю, и количество работы прямо пропорционально влияет на мои успехи. У меня не бывает такого, что альбом сдал и сижу, ничего не делаю. Я, например, вчера на студии был и только в 6 утра с нее вернулся»."
             };
-            btn3 = new Button
-            {
-                ImageSource = "OLD_BLOOD.jpg"
-            };
-            btn3.Clicked += Btn3_Clicked;
-            Introduction = new Label
-            {
-                IsVisible = false,
-                Padding = 20,
-                Text = "«Я очень хотел себе интро в духе старых рэперских альбомов. Искал-искал, и оно мне в руки само упало. Этот фрагмент взят из интервью Ксении Анатольевны Собчак с Алсу, где Собчак ставит Алсу мой трек. Так сказать, цитаты великих людей»."
-            };
             btn4 = new Button
             {
-                ImageSource = "OLD_BLOOD.jpg"
+                ImageSource = "oldblood.jpg"
             };
             btn4.Clicked += Btn4_Clicked;
-            ARTHOES = new Label
+            X2 = new Label
             {
                 IsVisible = false,
                 Padding = 20,
-                Text = "«Самый первый трек, который я сделал для этого альбома. Записал его в Берлине, когда мы снимали там клип на „DRUГ“. Этот трек и задал стилистический вектор альбома: такой приятный инструментальный хип-хоп. Как классика золотой эры, но сделанная по новым правилам, с новыми ударными. Трек основан на семпле из пьесы Эрика Сати. Мне нравится Сати, мне вообще многое нравится. Я иногда слушаю хор села Большебыково»."
+                Text = "«Для меня лично — это самый важный трек. Он об отношении к творчеству и вообще к жизни. Дальше я бы не стал объяснять то, что не надо объяснять. Магия пропадет»."
             };
-            
-
+           
 
 
 
@@ -83,13 +82,12 @@ namespace Album_Fil
                             HorizontalTextAlignment = TextAlignment.Center,
                             BackgroundColor=Color.DarkGray
                         },
-                        new Image {Source = "start.webp"},
-                        btn5
+                        
 
                     }
                 }
             };
-            var Angrytoys = new ContentPage
+            var Введение = new ContentPage
             {
                 Content = new StackLayout
                 {
@@ -98,21 +96,21 @@ namespace Album_Fil
                         new Label
                         {
 
-                            Text = "Холерик",
+                            Text = "Boulevard Depo - Введение",
                             TextColor = Color.White,
                             FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
                             HorizontalTextAlignment = TextAlignment.Center,
                             BackgroundColor=Color.Black,
-                            Padding = 20
+                            Padding = 20 
 
                         },
                         btn1,
-                        Angrytoys
+                        Introduction
 
                     }
                 }
             };
-            var X2 = new ContentPage
+            var Angrytoyss = new ContentPage
             {
                 Content = new StackLayout
                 {
@@ -120,7 +118,7 @@ namespace Album_Fil
                     {
                         new Label
                         {
-                            Text = "Сангвиник",
+                            Text = "Boulevard Depo - Angry toy$ ",
                             TextColor = Color.White,
                             FontSize = Device.GetNamedSize (NamedSize.Medium, typeof(Label)),
                             HorizontalTextAlignment = TextAlignment.Center,
@@ -129,13 +127,13 @@ namespace Album_Fil
 
                         },
                         btn2,
-                        X2
+                        Angrytoys
 
 
                     }
                 }
             };
-            var Introduction = new ContentPage
+            var OLDBLOODD = new ContentPage
             {
                 Content = new StackLayout
                 {
@@ -143,7 +141,7 @@ namespace Album_Fil
                     {
                         new Label
                         {
-                            Text = "Флегматик",
+                            Text = "Boulevard Depo - OLD BLOOD",
                             TextColor = Color.White,
                             FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
                             HorizontalTextAlignment = TextAlignment.Center,
@@ -151,12 +149,12 @@ namespace Album_Fil
                             Padding = 20
                         },
                         btn3,
-                        Introduction
+                        OLDBLOOD
 
                     }
                 }
             };
-            var ARTHOES = new ContentPage
+            var X22 = new ContentPage
             {
                 Content = new StackLayout
                 {
@@ -164,7 +162,7 @@ namespace Album_Fil
                     {
                         new Label
                         {
-                            Text = "Меланхолик",
+                            Text = "Boulevard Depo - X2",
                             TextColor = Color.White,
                             FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
                             HorizontalTextAlignment = TextAlignment.Center,
@@ -172,39 +170,39 @@ namespace Album_Fil
                             Padding = 20
                         },
                         btn4,
-                        ARTHOES
+                        X2
 
                     }
                 }
             };
 
             Children.Add(start);
-            Children.Add(Angrytoys);
-            Children.Add(X2);
-            Children.Add(Introduction);
-            Children.Add(ARTHOES);
+            Children.Add(Введение);
+            Children.Add(Angrytoyss);
+            Children.Add(OLDBLOODD);
+            Children.Add(X22);
         }
 
         
 
         private void Btn4_Clicked(object sender, EventArgs e)
         {
-            ARTHOES.IsVisible = true;
+            X2.IsVisible = true;
         }
 
         private void Btn2_Clicked(object sender, EventArgs e)
         {
-            X2.IsVisible = true;
+            Angrytoys.IsVisible = true;
         }
 
         private void Btn3_Clicked(object sender, EventArgs e)
         {
-            Introduction.IsVisible = true;
+            OLDBLOOD.IsVisible = true;
         }
 
         private void Btn1_Clicked1(object sender, EventArgs e)
         {
-            Angrytoys.IsVisible = true;
+            Introduction.IsVisible = true;
         }
     }
 }
